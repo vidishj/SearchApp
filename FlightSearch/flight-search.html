@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    
+    <title>Book Cheap Flights</title>
+        
+    <!-- Custom styles CSS file -->
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/bootstrap.min.css">
+    <link rel="stylesheet" href="Styles/bootstrap.css">
+    <!-- Jquery UI CSS File -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    
+    
+    
+    
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <div>
+                <img src="img/AirAsiana.jpg" width="180" alt="Air Asiana Logo" style="float: left;"/>
+            </div>
+        </div>
+        
+        <div style="text-align:center; clear:both; background-color: #e4e4e4; padding: 1px 0;  margin-bottom: 30px;">
+            <h2>Book A Flight</h2>
+        </div>
+        
+        <div class="col-md-3" style="background-color: #e9e9e9;">
+            <ul class="nav nav-pills">
+                <li class="active">
+                    <a data-toggle="pill" href="#return">Return</a>
+                </li>
+                <li>
+                    <a data-toggle="pill" href="#one-way">One Way</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="return" class="tab-pane fade in active">
+                    <form>
+                        <label>From</label>
+                        <select id="from" class="form-control">
+                            <option value="">Please Select</option>
+                            <option value="MEL">Melbourne</option>
+                            <option value="SYD">Sydney</option>
+                        </select>
+                                
+                        <label>To</label>
+                        <select id="destination" class="form-control">
+                            <option value="">Please Select</option>
+                            <option value="MEL">Melbourne</option>
+                            <option value="SYD">Sydney</option>
+                        </select>
+                                
+                        <label>Departure Date</label>
+                        <input class="form-control" type="text" id="departuredate"/>
+                            
+                        <label>Return Date</label>
+                        <input class="form-control" type="text" id="returndate" />
+                           
+                        <label>Adult</label>
+                        <select class="form-control"> 
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                        </select>
+                                
+                        <label>Child</label>
+                        <select class="form-control"> 
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <br>
+                            
+                        <div>
+                            <label>Refine Flight Search</label><br>
+                            <input type="text" class="price-left" id="amount1" readonly>
+                            <input type="text" class="price-right" id="amount2" readonly>
+                            <div id="flight-refine"></div><br>
+                    
+                        </div> 
+                        <br>
+                        <button class="btn btn-primary form-control" type="submit">Search Flights</button>
+                    </form>
+                    <br>
+                </div><!-- Tab Return -->
+                    
+                    
+                <div id="one-way" class="tab-pane fade">
+                    <form>
+                        <label>From</label>
+                        <select class="form-control">
+                            <option value="">Please Select</option>
+                            <option value="MEL">Melbourne</option>
+                            <option value="SYD">Sydney</option>
+                        </select>
+                            
+                        <label>To</label>
+                            <select class="form-control">
+                                <option value="">Please Select</option>
+                                <option value="MEL">Melbourne</option>
+                                <option value="SYD">Sydney</option>
+                            </select>
+                            
+                            <label>Departure Date</label>
+                            <input class="form-control" type="text" id="departuredate1"/>
+                
+                            <label>Passengers</label>
+                            <select class="form-control"> 
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                            <br>
+                            
+                            <div>
+                                <label>Refine Flight Search</label><br>
+                                <input type="text" class="price-left" id="amount3" readonly>
+                                <input type="text" class="price-right" id="amount4" readonly>
+                                <div id="flight-refine1"></div><br>
+                            </div> 
+                            <br>
+                            <button class="btn btn-primary form-control" type="submit">Search Flights</button>
+                    </form>
+                    <br>
+                </div> <!-- Tab One-way -->
+            </div><!-- Tab container -->
+        </div>
+            
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-9">
+                    <span class="section-heading">Departing Flights</span>
+                </div>
+                    
+                <div class="col-md-3">
+                    <p>Depart: <b>12th August 2015</b></p>
+                    <p><b>Melbourne > Sydney</b></p>
+                </div>
+                    
+            </div>
+                    
+                    
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                            
+                    <tr>
+                        <th>Flight</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Flight No</th>
+                        <th class="economy-class">Economy</th>
+                        <th class="business-class">Business</th>
+                        <th></th>
+                    </tr>
+                            
+                    <tr>
+                        <td>
+                            <span>
+                                <img alt="Quantas Logo" src="img/quantas-logo.gif"/> 
+                            </span>
+                        </td>
+                        <td>
+                            <p><b>10.00 AM</b></p>
+                            Melbourne 
+                        </td>
+                        <td>
+                            <p><b>11.30 AM</b></p>
+                            Sydney
+                        </td>
+                        <td>QT249</td>
+                        <td>
+                            <span class="currency">AUD 100</span>
+                        </td>
+                        <td>
+                            <span class="currency">AUD 150</span>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" value="Select this ticket">Select this flight</button>
+                        </td>
+                    </tr>
+                            
+                    <tr>
+                        <td>
+                            <span> 
+                                <img alt="Virgin Australia Logo" src="img/virgin-aus-logo.gif"/> 
+                            </span>
+                            </td>
+                            <td>
+                                <p><b>12.00 PM</b></p>
+                                Melbourne
+                            </td>
+                            <td>
+                                <p><b>1.30 PM</b></p>
+                                Sydney
+                            </td>
+                            <td>VG567</td>
+                            <td>
+                                <span class="currency">AUD 150</span>
+                            </td>
+                            <td>
+                                <span class="currency">AUD 250</span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-primary" value="Select this ticket">Select this flight</button>
+                            </td>
+                        </tr>
+                </table>  
+                    
+                <div class="row flights-back">
+                    <div class="col-md-9">
+                        <span class="section-heading">Returning Flights</span>
+                    </div>
+                    <div class="col-md-3">
+                        <p>Return: <b>13th August 2015</b></p>
+                        <p><b>Sydney > Melbourne</b></p>
+                    </div>
+                </div>
+                    
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Flight</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Flight No</th>
+                        <th class="economy-class">Economy</th>
+                        <th class="business-class">Business</th>
+                        <th></th>
+                    </tr>
+                        
+                    <tr>
+                        <td>
+                            <span>
+                                <img alt="Quantas Logo" src="img/quantas-logo.gif">
+                            </span>
+                        </td>
+                        <td>
+                            <p><b>10.00 AM</b></p>
+                            Sydney 
+                        </td>
+                        <td>
+                            <p><b>11.30 AM</b></p>
+                            Melbourne
+                        </td>
+                        <td>QT278</td>
+                        <td>
+                            <span class="currency">AUD 100</span>
+                        </td>
+                        <td>
+                            <span class="currency">AUD 200</span>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" value="Select this ticket">Select this flight</button>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <span>
+                                <img alt="Tiger Air Logo" src="img/tiger-air-logo.gif"/> 
+                            </span>
+                        </td>
+                        <td>
+                            <p><b>12.00 PM</b></p>
+                            Sydney
+                        </td>
+                        <td>
+                            <p><b>1.30 PM</b></p>
+                            Melbourne
+                        </td>
+                        <td>TG599</td>
+                        <td>
+                            <span class="currency">AUD 150</span>
+                        </td>
+                        <td>
+                            <span class="currency">AUD 200</span>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" value="Select this ticket">Select this flight</button>
+                        </td>
+                    </tr>
+                </table>  
+            </div>
+                
+        </div>
+    </div> <!-- End of container -->
+    
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="Scripts/respond.js"></script>
+    
+    <script>
+        $(function() {
+            $( "#flight-refine" ).slider({
+                range: true,
+                min: 50,
+                max: 200,
+                values: [ 50, 200 ],
+                slide: function( event, ui ) {
+                    $( "#amount1" ).val("$" + ui.values[ 0 ]);
+                    $( "#amount2" ).val("$" + ui.values[ 1 ]);
+                }
+            });
+            $( "#amount1" ).val("$" + $( "#flight-refine" ).slider( "values", 0 ));
+            $( "#amount2" ).val("$" + $( "#flight-refine" ).slider( "values", 1 ));
+            
+            $( "#flight-refine1" ).slider({
+                range: true,
+                min: 50,
+                max: 200,
+                values: [ 50, 200 ],
+                slide: function( event, ui ) {
+                    $( "#amount3" ).val("$" + ui.values[ 0 ]);
+                    $( "#amount4" ).val("$" + ui.values[ 1 ]);
+                }
+            });
+            $( "#amount3" ).val("$" + $( "#flight-refine1" ).slider( "values", 0 ));
+            $( "#amount4" ).val("$" + $( "#flight-refine1" ).slider( "values", 1 ));
+        });
+        
+        $(function() {
+            $( "#departuredate" ).datepicker();
+            $( "#departuredate1" ).datepicker();
+            $( "#returndate" ).datepicker();
+        });
+            
+    </script>
+</body>
+</html>
